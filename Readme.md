@@ -3,7 +3,7 @@
 This is the implementation of the algorithm MATCHA for analyzing multi-way chromatin interaction data via hypergraph representation learning.
 
 ## Requirements
-The main part of the alogrithm (process.py, generate_kmers.py, main.py) requires
+The main part of the alogrithm (`process.py, generate_kmers.py, main.py`) requires
 
 
 - h5py
@@ -14,7 +14,7 @@ The main part of the alogrithm (process.py, generate_kmers.py, main.py) requires
 - tqdm
 
 
-The visualization part of the algorihtm (denoise_contact.py) requires
+The visualization part of the algorihtm (`denoise_contact.py`) requires
 
 - seaborn
 - matplotlib
