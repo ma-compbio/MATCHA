@@ -53,3 +53,4 @@ Note that, some scripts only use part of these parameters, so these parameters c
    1. `model2load` within the `temp_dir` above. The model can be loaded by `model = torch.load(FILEPATH)`. The model can return predictions through `model(x)`. Note that the `x` should be a pytorch tensor of dtype `torch.long`
    2. `embeddings.npy` lies in the root dir. It's the embedding vectors for the genomic bins. 
 5. To generate the denoised contact matrix, run `python denoise_contact.py` There will output figures named as `chr1_origin.png` and `chr1_denoise.png` produced in the root dir
+
