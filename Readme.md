@@ -37,8 +37,8 @@ Note that, some scripts only use part of these parameters, so these parameters c
 |min_distance | minimum pairwise genomic distance constraint for multi-way interactions (in unit of the number of bins) |0| generate_kmers.py, main.py, denoise_contact.py|
 |k-mer_size| list of the size of the k-mers to considier | [2,3,4,5] | generate_kmers.py, main.py, 
 |min_freq_cutoff | only consider k-mers with occurrence frequency >= | 2 | generate_kmers.py|
-|quantile_cutoff_for_positive | the quantile cutoff of hyperedges to be considered as positive samples | 0.6 | main.py | 
-|quantile_cutoff_for_unlabel | the quantile cutoff of hyperedges to be considered as non-negative samples (positive + samples that cannot be confidently classified as either positive or negative samples) | 0.6 | main.py | 
+|quantile_cutoff_for_positive | the quantile cutoff of hyperedges to be considered as positive samples. For instance, 0.6 represents the hyperedges with occurrence frequency in the top 40% (>= 0.6) would be used as positive samples. The cut-off is applied to different sized hyperedges separately| 0.6 | main.py | 
+|quantile_cutoff_for_unlabel | the quantile cutoff of hyperedges to be considered as non-negative samples (positive + samples that cannot be confidently classified as either positive or negative samples) | 0.4 | main.py | 
 |embed_dim | embedding dimensions for the bins | 64| main.py|
 
 
