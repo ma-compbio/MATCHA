@@ -115,18 +115,18 @@ for i in range(len(chrom_range)):
 	ax = sns.heatmap(my, cmap="Reds", square=True, mask=mask ,cbar=False, vmin=vmin, vmax=vmax)
 	ax.get_xaxis().set_visible(False)
 	ax.get_yaxis().set_visible(False)
-	plt.savefig("../chr%d_my.png" %(i+1), dpi=300)
+	plt.savefig("../chr%d_denoise.png" %(i+1), dpi=300)
 	plt.close(fig)
 	
-	fig = plt.figure(figsize=(5, 5))
-	plt.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0)
-	mask =None
-	# print ("matrix", matrix, np.min(matrix), np.max(matrix))
-	ax = sns.heatmap(my_proba, cmap="Reds", square=True, mask=mask ,cbar=False, vmin=vmin, vmax=vmax)
-	ax.get_xaxis().set_visible(False)
-	ax.get_yaxis().set_visible(False)
-	plt.savefig("../chr%d_my_proba.png" %(i+1), dpi=300)
-	plt.close(fig)
+	# fig = plt.figure(figsize=(5, 5))
+	# plt.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0)
+	# mask =None
+	# # print ("matrix", matrix, np.min(matrix), np.max(matrix))
+	# ax = sns.heatmap(my_proba, cmap="Reds", square=True, mask=mask ,cbar=False, vmin=vmin, vmax=vmax)
+	# ax.get_xaxis().set_visible(False)
+	# ax.get_yaxis().set_visible(False)
+	# plt.savefig("../chr%d_denoise_proba.png" %(i+1), dpi=300)
+	# plt.close(fig)
 	
 	fig = plt.figure(figsize=(5, 5))
 	plt.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0)
