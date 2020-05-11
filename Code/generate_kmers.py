@@ -120,8 +120,9 @@ for k in k_list:
 			a = p.result()
 			i_list, temp, temp_freq = a
 			jobs_left -= len(i_list)
-			list1.append(temp)
-			list1_freq.append(temp_freq)
+			if len(temp) > 0:
+				list1.append(temp)
+				list1_freq.append(temp_freq)
 			
 			process_list.remove(p)
 			del p
