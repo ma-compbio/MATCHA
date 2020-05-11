@@ -34,7 +34,6 @@ Note that, some scripts only use part of these parameters, so these parameters c
 |chrom_size | the path of the chromatin size file | "./hg38.chrom.sizes.txt" | process.py|
 |temp_dir | the directory of the temp files to store | "../Temp" | all|
 |max_cluster_size| the maximum cluster size to consider | 25| process.py, generate_kmers.py |
-|
 |min_distance | minimum pairwise genomic distance constraint for multi-way interactions (in unit of the number of bins) |0| generate_kmers.py, main.py, denoise_contact.py|
 |k-mer_size| list of the size of the k-mers to considier | [2,3,4,5] | generate_kmers.py, main.py, 
 |min_freq_cutoff | only consider k-mers with occurrence frequency >= | 2 | generate_kmers.py|
