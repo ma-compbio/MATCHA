@@ -1,0 +1,19 @@
+{
+  "cluster_path": "abc.cluster",
+  "mcool_path": "abc.mcool",
+  "resolution": 1000000,
+  "chrom_list": ["chr1","chr2","chr3","chr4","chr5",
+			  "chr6","chr7","chr8","chr9","chr10",
+			  "chr11","chr12","chr13","chr14","chr15",
+			  "chr16","chr17","chr18","chr19","chr20",
+			  "chr21","chr22","chrX"],
+  "chrom_size": "../hg38.chrom.sizes.txt",
+  "temp_dir": "../Temp",
+  "max_cluster_size": 25,
+  "min_distance": 0,
+  "k-mer_size": [2, 3, 4, 5],
+  "min_freq_cutoff": 2,
+  "quantile_cutoff_for_positive": 0.6,
+  "quantile_cutoff_for_unlabel": 0.4,
+  "embed_dim": 64
+}
