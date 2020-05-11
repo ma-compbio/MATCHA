@@ -8,7 +8,8 @@ from concurrent.futures import as_completed, ProcessPoolExecutor
 from copy import copy, deepcopy
 from pybloom_live import BloomFilter
 import math
-
+from tqdm import tqdm, trange
+import os
 
 def add_padding_idx(vec):
 	if len(vec.shape) == 1:

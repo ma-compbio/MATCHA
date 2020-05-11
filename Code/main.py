@@ -1,7 +1,7 @@
 from pybloom_live import BloomFilter
 import multiprocessing
 from torch.nn.utils.rnn import pad_sequence
-import os
+
 import time
 from tqdm import tqdm, trange
 import argparse
