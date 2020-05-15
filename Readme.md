@@ -48,10 +48,12 @@ Note that, some scripts only use part of these parameters, so these parameters c
    1. `bin2node.npy, node2bin.npy` within the `temp_dir` above. As the name indicates, it's a dictionary that maps the genomic bin to the node id and vice verse. The genomic bin has the format of `chr1:2000000`
    2. `node2chrom.npy`. It maps the node id to the chromosome.
    3. All these dictionaries can be loaded through `np.load(FILEPATH, allow_picke=True).item()`
-3. Run `python generate_kmers.py`, which will further transfer the parsed cluster file into a list of k-mers (hyperedges) with the corresponding occurrence frequencies
+3. Run `python generate_kmers.py`, which will further transfer the parsed cluster file into a list of k-mers (hyperedges) with the corresponding occurrence frequencies. The output files are
+   1. `all_<k-mer size>_counter.npy`: the generated k-mers
+   2. `all_<k-mer size>_freq_counter.npy`: the occurrence frequency corresponds to the generated k-mers
 4. Run `python main.py`, which will train the model based on the generated dataset. The output includes:
    1. `model2load` within the `temp_dir` above. The model can be loaded by `model = torch.load(FILEPATH)`. The model can return predictions through `model(x)`. Note that the `x` should be a pytorch tensor of dtype `torch.long`
-   2. `embeddings.npy` lies in the root dir. It's the embedding vectors for the genomic bins. 
+   2. `embeddings.npy` lies in the root dir. It's the embedding vectors for the genomic bins. The shape of the vectors are `(num of genomic bins, embed_dim chosen above)`. The mapping relationship between the genomic bin and its index in this vector can be retrived in the dictionary `node2bin.npy, bin2node.npy` mentioned above.
 5. To generate the denoised contact matrix, run `python denoise_contact.py` There will be utput figures named as `chr1_origin.png` and `chr1_denoise.png` produced in the root dir
 
 6. To predict the probabilities of forming multi-way chromatin interactions for a custom list of genome coordinate, run `python predict_multiway.py -i INPUT_FILE -o OUTPUT_FILE`. The `INPUT_FILE` should be a text file where each line is a tab separated list of genome coordinates. For example:
