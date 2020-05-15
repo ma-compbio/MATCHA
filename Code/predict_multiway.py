@@ -30,7 +30,7 @@ def parse_file(filepath):
 	final = []
 	
 	while line:
-		info_list = line.strip().split("\t")[1:]
+		info_list = line.strip().split("\t")
 		temp = []
 		
 		for info in info_list:
