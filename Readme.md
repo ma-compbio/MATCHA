@@ -62,3 +62,20 @@ chr1:1000000<tab>chr2:20000<tab>chr3:40000
 chr1:1000000<tab>chr2:20000<tab>chr3:40000<tab>chr1:12345
 ```
 The output file will be a list of the probability scores stored in the `OUTPUT_FILE`
+
+## Cite
+
+If you want to cite our paper
+
+```
+@article{zhang2020matcha,
+  title={MATCHA: Probing Multi-way Chromatin Interaction with Hypergraph Representation Learning},
+  author={Zhang, Ruochi and Ma, Jian},
+  journal={Cell Systems},
+  volume={10},
+  number={5},
+  pages={397--407},
+  year={2020},
+  publisher={Elsevier}
+}
+```
