@@ -54,7 +54,7 @@ Note that, some scripts only use part of these parameters, so these parameters c
 4. Run `python main.py`, which will train the model based on the generated dataset. The output includes:
    1. `model2load` within the `temp_dir` above. The model can be loaded by `model = torch.load(FILEPATH)`. The model can return predictions through `model(x)`. Note that the `x` should be a pytorch tensor of dtype `torch.long`
    2. `embeddings.npy` lies in the root dir. It's the embedding vectors for the genomic bins. The shape of the vectors are `(num of genomic bins, embed_dim chosen above)`. The mapping relationship between the genomic bin and its index in this vector can be retrived in the dictionary `node2bin.npy, bin2node.npy` mentioned above.
-5. To generate the denoised contact matrix, run `python denoise_contact.py` There will be utput figures named as `chr1_origin.png` and `chr1_denoise.png` produced in the root dir
+5. To generate the denoised contact matrix, run `python denoise_contact.py` There will be output figures named as `chr1_origin.png` and `chr1_denoise.png`, etc... produced in the root dir. There will also be an mcool file named as `denoised.mcool` in the root dir, which contains the denoised intra-chromosomal contact matrix at the given resolution.
 
 6. To predict the probabilities of forming multi-way chromatin interactions for a custom list of genome coordinate, run `python predict_multiway.py -i INPUT_FILE -o OUTPUT_FILE`. The `INPUT_FILE` should be a text file where each line is a tab separated list of genome coordinates. For example:
 ```text
